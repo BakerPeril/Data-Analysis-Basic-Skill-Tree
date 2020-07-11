@@ -15,7 +15,29 @@
 
 如何如何使用爬虫
 
-使用第三方工具例如：[八爪鱼](https://www.bazhuayu.com/)、[火车采集器](http://www.locoy.com/)、[集搜客](http://www.gooseeker.com/)
+爬虫主要模拟访问网站的过程，整个过程分为三个阶段：打开网页、提取数据、保存数据。
+
+爬虫每个阶段的在Python中都有相应的工具使用。
+
+"打开网页"可以使用Requests访问页面，来得到服务器的相应数据，返回的有HTML页面以及JSON数据；
+
+"提取数据"这一步中，可以使用XPath进行元素定位、提取数据，针对[JSON](https://zh.wikipedia.org/wiki/JSON)可以使用JSON进行解析；
+
+“保存数据”可以使用Pandas保存数据，最后到处CSV文件。[具体应用实例：Python爬虫获取数据](./Python爬虫获取数据.py)
+
+抓取数据还可以使用第三方工具例如：[八爪鱼](https://www.bazhuayu.com/)、[火车采集器](http://www.locoy.com/)、[集搜客](http://www.gooseeker.com/)
+
+
+
+#####  八爪鱼工具使用范例
+
+八爪鱼基本步骤有四步：**打开网页-->点击元素-->循环翻页-->提取数据**
+
+高级步骤是对上述四步进行辅助，它们分别是：**输入文字、验证码识别、下拉选项、判断条件、鼠标移动到元素、结束循环、结束流程**
+
+针对与使用八爪鱼工具，除了了解上述步骤外，外需要了解***流程视图***、***[XPath](https://www.runoob.com/xpath/xpath-tutorial.html)***两个工具
+
+mac上有个和八爪鱼类似的工具：后羿采集器
 
 ## 日志采集
 
@@ -30,3 +52,12 @@
 ##  传感器
 
 讲到传感器我内心的第一印象就是，iWatch，现在很多的运动健身app，各种手环，来传递最日常的信息给手机，手机每个人的健康信息来传递数据，其实就我现在的工作来讲，很多工艺流程都有相应的传感器，来传输数据，只不过这些数据更多的是监控的作用。
+
+
+
+
+
+#####　参考
+
+-[1] [极客时间-数据分析实战45讲-陈旸-08数据采集](https://time.geekbang.org/column/article/a2b55ab8bc01e838291da55de22c58d5/share?code=Rdnlt3SfqobWcIdAfk19Ey4ovxPZizYXSDaYDJX6gow%3D)
+
